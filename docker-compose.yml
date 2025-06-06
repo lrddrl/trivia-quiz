@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  mongo:
+    image: mongo:latest
+    ports:
+      - 27017:27017
+    restart: always
+
+  backend:
+    build: ./trivia-quiz-backend
+    ports:
+      - 3001:3001
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/trivia_quiz
+    depends_on:
+      - mongo
+
+  frontend:
+    build: ./trivia-quiz-frontend
+    ports:
+      - 3000:3000
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:3001
+    depends_on:
+      - backend
