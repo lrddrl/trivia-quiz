@@ -1,5 +1,6 @@
 Trivia Quiz App
 A fullstack trivia quiz web application built with Node.js, Express, MongoDB.
+<img width="723" alt="c4f4970e68bcb2037c1ebdfdf2e07cb" src="https://github.com/user-attachments/assets/1144cb46-eba3-4713-bf3d-0e8326e24eaa" />
 
 Features
 Select category, difficulty, and number of questions
